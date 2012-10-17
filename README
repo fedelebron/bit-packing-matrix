@@ -1,0 +1,12 @@
+A small implementation of bit packed square (0, 1) matrices, showcasing the speed difference in calculating squares.
+
+This implementation is a naive vector<vector<int>>, yet speed gains are palpable.
+
+For instance:
+
+./main 4096
+
+This will calculate the square of a random (Erdos-Renyi) 4096x4096 binary matrix, using the usual algorithm, and using bit packed matrices and bitwise operations.
+It will then output how long each operation took.
+
+Future improvements include Strassen multiplication, and, since this is embarassingly parallel, either GPU or multithreaded processing.
