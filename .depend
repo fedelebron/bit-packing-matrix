@@ -1,0 +1,2 @@
+square_bool_matrix.o: square_bool_matrix.cpp square_bool_matrix.h
+main.o: main.cpp erdos_renyi.hpp square_bool_matrix.h
