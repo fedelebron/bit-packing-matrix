@@ -32,7 +32,7 @@ int main(int argc, char** argv) {
     for(int j = 0; j < n; ++j)
       normal[i][j] = int(m.get(i, j));
 
-  auto t1 = std::chrono::high_resolution_clock::now();
+  auto t1 = chrono::high_resolution_clock::now();
   vector<vector<int>> squared_normal(n, vector<int>(n, 0));
   for(int i = 0; i < n; ++i) {
     for(int j = 0; j <= i; ++j) {
@@ -42,7 +42,7 @@ int main(int argc, char** argv) {
       squared_normal[i][j] = squared_normal[j][i] = sum;
     }
   } 
-  auto t2 = std::chrono::high_resolution_clock::now();
+  auto t2 = chrono::high_resolution_clock::now();
 
 #ifdef ECHO
   cout << endl << "Normal:" << endl;
@@ -58,9 +58,9 @@ int main(int argc, char** argv) {
   cout << "-----------------------------" << endl << endl;
 #endif
 
-  auto t3 = std::chrono::high_resolution_clock::now();
+  auto t3 = chrono::high_resolution_clock::now();
   auto square = m.square();
-  auto t4 = std::chrono::high_resolution_clock::now();
+  auto t4 = chrono::high_resolution_clock::now();
 
 #ifdef ECHO
   for(int i = 0; i < n; ++i) {
