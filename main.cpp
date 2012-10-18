@@ -34,6 +34,7 @@ int main(int argc, char** argv) {
 
   auto t1 = chrono::high_resolution_clock::now();
   vector<vector<int>> squared_normal(n, vector<int>(n, 0));
+# pragma omp parallel for
   for(int i = 0; i < n; ++i) {
     for(int j = 0; j <= i; ++j) {
       int sum = 0;

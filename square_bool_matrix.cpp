@@ -7,6 +7,7 @@ using std::vector;
 vector<vector<int>> SquareBoolMatrix::square() const {
   vector<vector<int>> squared(n_, vector<int>(n_, 0));
   int m = n_/32;
+# pragma omp parallel for
   for(int i = 0; i < n_; ++i) {
     for(int j = 0; j <= i; ++j) {
       int sum = 0;
