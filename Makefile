@@ -1,4 +1,4 @@
-CXXFLAGS = -std=c++11 -O3 -mpopcnt
+CXXFLAGS = -std=c++11 -O3 -mpopcnt -fopenmp
 RM = rm -f
 
 SRCS = square_bool_matrix.cpp main.cpp 
@@ -7,7 +7,7 @@ OBJS = $(subst .cpp,.o,$(SRCS))
 all: main
 
 main: $(OBJS)
-	$(CXX) -o main $(OBJS)
+	$(CXX) $(CXXFLAGS) -o main $(OBJS)
 
 depend: .depend
 

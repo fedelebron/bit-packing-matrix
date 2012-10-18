@@ -9,4 +9,4 @@ For instance:
 This will calculate the square of a random (Erdos-Renyi) 4096x4096 binary matrix, using the usual algorithm, and using bit packed matrices and bitwise operations.
 It will then output how long each operation took.
 
-Future improvements include Strassen multiplication, and, since this is embarassingly parallel, either GPU or multithreaded processing.
+Future improvements include Strassen multiplication, and, since this is embarassingly parallel, either GPU or multithreaded processing using more than a simple naive OpenMP solution.
